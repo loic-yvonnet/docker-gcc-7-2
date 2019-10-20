@@ -10,7 +10,7 @@ export docker_directory=${tools_directory}/docker
 
 # Docker
 export docker_image=loic-yvo/ubuntu/gcc
-export docker_image_version=${docker_image}:7-2
+export docker_image_version=${docker_image}:7.2
 export container_alias=devenv
 export docker_compose_path=${docker_directory}/compose.yml
 export docker_workspace_directory=/home/develop/dev
