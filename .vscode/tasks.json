@@ -4,29 +4,29 @@
         {
             "label": "start develop env",
             "type": "shell",
-            "command": "docker-compose -f compose.yml run --service-ports --name devenv dev-image bash",
+            "command": "${workspaceFolder}/tools/shells/start_container.sh",
             "problemMatcher": []
         },
         {
             "label": "stop develop env",
             "type": "shell",
-            "command": "docker-compose -f compose.yml down",
+            "command": "${workspaceFolder}/tools/shells/stop_container.sh",
             "problemMatcher": []
         },
         {
             "label": "cmake generate",
             "type": "shell",
-            "command": "docker exec -it devenv cmake .",
+            "command": "${workspaceFolder}/tools/shells/gen_cmake.sh",
             "problemMatcher": []
         },
         {
-            "label": "build",
+            "label": "compile",
             "type": "shell",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "command": "docker exec -it devenv make",
+            "command": "${workspaceFolder}/tools/shells/compile.sh",
             "problemMatcher": [
                 "$gcc"
             ]            
@@ -34,7 +34,7 @@
         {
             "label": "clean",
             "type": "shell",
-            "command": "docker exec -it devenv make clean",
+            "command": "${workspaceFolder}/tools/shells/clean.sh",
             "problemMatcher": [
                 "$gcc"
             ]
@@ -42,30 +42,30 @@
         {
             "label": "make package",
             "type": "shell",
-            "command": "docker exec -it devenv make package"
+            "command": "${workspaceFolder}/tools/shells/make_package.sh"
         },
         {
             "label": "start-gdbserver",
             "type": "shell",
-            "command": "docker exec -d devenv gdbserver :2000 build/bin/hello_world",
+            "command": "${workspaceFolder}/tools/shells/start_gdbserver.sh",
             "problemMatcher": []
         },
         {
             "label": "build develop image",
             "type": "shell",
-            "command": "docker build -f Dockerfile -t loic-yvo/ubuntu/gcc:7.2 .",
+            "command": "${workspaceFolder}/tools/shells/build_docker_image.sh",
             "problemMatcher": []
         },
         {
             "label": "run app",
             "type": "shell",
-            "command": "docker exec -d devenv build/bin/your_app",
+            "command": "${workspaceFolder}/tools/shells/run.sh",
             "problemMatcher": []
         },
         {
             "label": "stop app",
             "type": "shell",
-            "command": "docker exec -d devenv pkill your_app",
+            "command": "${workspaceFolder}/tools/shells/kill.sh",
             "problemMatcher": []
         }
     ]
