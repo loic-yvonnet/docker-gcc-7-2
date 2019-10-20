@@ -13,7 +13,7 @@
             "externalConsole": true,
             "filterStderr": true,
             "filterStdout": true,
-            "preLaunchTask": "Start GDB Server",
+            "preLaunchTask": "start-gdbserver",
             "miDebuggerServerAddress": "localhost:2000",
             "MIMode": "gdb",
             "miDebuggerPath": "gdb",
