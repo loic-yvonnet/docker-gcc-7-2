@@ -13,7 +13,10 @@ export docker_image=loic-yvo/ubuntu/gcc
 export docker_image_version=${docker_image}:7-2
 export container_alias=devenv
 export docker_compose_path=${docker_directory}/compose.yml
+export docker_workspace_directory=/home/develop/dev
+export docker_build_directory=${docker_workspace_directory}/build
 
 # Others
 export target_program_name=hello_world
 export target_program_path=${build_directory}/bin/${target_program_name}
+export docker_target_program_path=${docker_build_directory}/bin/${target_program_name}
