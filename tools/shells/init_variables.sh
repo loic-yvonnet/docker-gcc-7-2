@@ -5,6 +5,7 @@ export shells_directory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&
 export workspace_directory=${shells_directory}/../..
 export src_directory=${workspace_directory}/src
 export build_directory=${workspace_directory}/build
+export release_directory=${workspace_directory}/release
 export tools_directory=${workspace_directory}/tools
 export docker_directory=${tools_directory}/docker
 
@@ -15,6 +16,7 @@ export container_alias=devenv
 export docker_compose_path=${docker_directory}/compose.yml
 export docker_workspace_directory=/home/develop/dev
 export docker_build_directory=${docker_workspace_directory}/build
+export docker_release_directory=${docker_workspace_directory}/release
 
 # Others
 export target_program_name=hello_world
