@@ -5,25 +5,18 @@
             "name": "Launch C++ Docker Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/hello-world",
+            "program": "${workspaceFolder}/build/bin/hello_world",
             "args": [],
+            "targetArchitecture": "x64",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
-            "filterStderr": true,
-            "filterStdout": true,
             "preLaunchTask": "start-gdbserver",
             "miDebuggerServerAddress": "localhost:2000",
-            "MIMode": "gdb",
-            "miDebuggerPath": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
+            "miDebuggerPath": "/usr/bin/gdb",
+            "sourceFileMap":{
+				"/home/develop/dev": "${workspaceRoot}"
+			}
         }
     ]
 }
